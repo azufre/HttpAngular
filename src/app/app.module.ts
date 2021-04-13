@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
 import { YoutubeSearchComponent } from './youtube-search/youtube-search.component';
 
+import { youTubeServiceInjectables } from './youtube-search/youtube-search.injectable';
+import { SearchBoxComponent } from './search-box/search-box.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     SimpleHttpComponent,
-    YoutubeSearchComponent
+    YoutubeSearchComponent,
+    SearchBoxComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule 
   ],
-  providers: [],
+  providers: [youTubeServiceInjectables],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
